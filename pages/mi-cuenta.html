@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200&family=Rock+Salt&display=swap" rel="stylesheet">  
+        <link href="../scss/base/_normalize.scss" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">  
+        <title>Cuenta - ArteImpreso</title>
+    </head>
+ 
+    <body>
+        
+        <header class="header"> <!-- Seccion 1 -->
+            <div class="grid">
+                <div class="textoLogo">
+                    <a href="../index.html">
+                        <h1>TU.SNEAKER</h1>
+                    </a>
+                    
+                </div>
+                <nav class="navegacionPrincipal">
+                    <a href="../index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="Tu.Sneaker.html">Tu.Sneaker</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="mi-cuenta.html">Cuenta</a>
+                </nav>
+            </div>
+        </header> 
+
+        <div class="tituloSecundario">
+            <h2>Cuenta</h2>
+        </div>
+        
+        <section class="cuentas"> <!-- Seccion 2 -->
+            <div class="grid">
+                <form class="formulario formularioIzquierda" action="">
+                    <fieldset>
+                        <legend>Acceder</legend>
+                        <div class="contenedorCampos">
+                            <div class="campo">
+                                <label for="usuario">Nombre de usuario o Correo electrónico <span>*</span></label>
+                                <input type="text" placeholder="Tu nombre" id="usuario" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="contrasena">Contraseña <span>*</span></label>
+                                <input type="password" placeholder="Contraseña" id="contrasena" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="botonFormulario">
+                        <input class="boton botonInput" type="submit" value="Acceder">
+                    </div>
+                </form>
+            
+                <form class="formulario" action="">
+                    <fieldset>
+                        <legend>Registrarse</legend>
+                        <div class="contenedorCampos">
+                            <div class="campo">
+                                <label for="correo2">Dirección de correo electronico <span>*</span></label> 
+                                <input type="email" placeholder="Tu email" id="correo2" required>
+                            </div>
+        
+                            <div class="campo">
+                                <label for="contrasena2">Contraseña</label>
+                                <input type="password" placeholder="Contraseña" id="contrasena2" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="botonFormulario">
+                        <input class="boton botonInput" type="submit" value="Registrarse">
+                    </div>
+                </form>
+            </div>
+
+        </section>  
+
+        <hr class="lineaDivisora">
+
+        <footer class="footer"> <!-- Seccion 4 -->
+            <div class="grid">
+                <div class="redesFooter">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="../img/bxl-facebook.svg" alt="Logo de Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="../img/bxl-instagram.svg" alt="Logo de Instagram">
+                    </a>
+                    <div class="textosFooter">
+                      <p>2023 - Todos los derechos reservados Tu.Sneaker.</p>
+                    </div>  
+                </div>                    
+            </div>
+        </footer>
+
+    </body>
+</html>

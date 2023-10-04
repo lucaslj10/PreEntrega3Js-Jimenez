@@ -1,0 +1,16 @@
+@import '../utilities/mixins';
+@import '../components/cards';
+
+.banner2 {
+    @include banner('../img/banner2.jpg');
+} 
+
+.tituloNuestroTrabajo {
+    h2 {
+        text-align: center;
+        margin: 5rem;
+        color: $color-dark;
+        font-size: 5rem;
+    } 
+}
+

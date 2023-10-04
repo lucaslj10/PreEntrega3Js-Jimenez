@@ -1,0 +1,19 @@
+
+
+@mixin centrarContenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin banner($imgBanner) {
+    height: 100vh;
+    background: url($imgBanner) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@mixin rotarImg($grados) {
+    transform: rotate($grados);
+}

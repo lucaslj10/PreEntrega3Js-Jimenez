@@ -1,0 +1,15 @@
+@import '../base/colors';
+@import '../utilities/mixins';
+
+.footer {
+    background: $color-primary;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    &__content {
+        text-align: center;
+        &-icons a {
+            text-decoration: none;
+        }
+    }
+}

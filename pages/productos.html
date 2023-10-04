@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tienda Tu.Sneaker.Las mejores Zapatillas,NIKE-JORDAN-ADIDAS las encontras acá! Si sos de Buenoas Aires envios sin cargo!"
+    />
+    <meta
+      name="keywords"
+      content="NIKE,JORDAN,ADIDAS,ZAPATILLAS,SHOP,SNEAKERS"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link href="../css/produc.css" rel="stylesheet" />
+
+    <title>Productos - Tu.Sneaker</title>
+  </head>
+  <header>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo"><a href="../index.html">TU.SNEAKER</a></div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/productos.html">Productos</a></li>
+          <li><a href="../pages/Tu.Sneaker.html">Tu.Sneaker</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
+          <li><a href="../pages/mi-cuenta.html">Cuenta</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <body>
+    <main>
+      <input id="inputBuscar" type="text" placeholder="Buscar productos..." />
+      <div id="productos"></div>
+    </main>
+
+    <section class="ocultar">
+      <h1>
+        <span id="cantidadProductos">0</span>
+      </h1>
+      <div id="scroll">
+        <div id="carrito"><</div>
+      </div>
+      <h2>Total: $<span id="totalCarrito">0</span></h2>
+      <a href="#" id="botonComprar" class=".btnComprar">COMPRAR</a>
+    </section>
+
+    <footer class="footer">
+      <!-- Seccion 4 -->
+      <div class="footer__content container">
+        <div class="footer__content-icons row">
+          <div class="col">
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../img/bxl-facebook.svg" alt="Logo de Facebook" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../img/bxl-instagram.svg" alt="Logo de Instagram" />
+            </a>
+          </div>
+        </div>
+        <div class="footer__content-texts row">
+          <div class="col">
+            <p>2023 - Todos los derechos reservados Tu.Sneaker.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="../js/app2.js"></script>
+  </body>
+</html>
