@@ -11,21 +11,12 @@ class Producto {
 class BaseDeDatos {
   constructor() {
     this.productos = [];
-
-    this.agregarRegistro(1, "NIKE AIR FORCE 1", 400, "Zapatillas", "af1.jpg");
-    this.agregarRegistro(2, "NIKE DUNK LOW", 300, "Zapatillas", "nd.jpg");
-    this.agregarRegistro(3, "NIKE AIR MAX 97", 100, "Zapatillas", "na.jpg");
-    this.agregarRegistro(4, "JORDAN RETRO 1", 300, "Zapatillas", "j1.jpg");
-    this.agregarRegistro(1, "JORDAN RETRO 3", 1800, "Zapatillas", "j3.jpg");
-    this.agregarRegistro(2, "JORDAN RETRO 4", 300, "Alimentos", "j4.jpg");
-    this.agregarRegistro(3, "ADIDAS YEEZY", 240, "Zapatillas", "ay.jpg");
-    this.agregarRegistro(4, "ADIDAS OZWEEGO", 100, "Zapatillas", "ao.jpg");
-    this.agregarRegistro(1, "ADIDAS FORUM", 300, "Zapatillas", "af.jpg");
+    this.cargarRegistros();
   }
-
-  agregarRegistro(id, nombre, precio, categoria, imagen) {
-    const producto = new Producto(id, nombre, precio, categoria, imagen);
-    this.productos.push(producto);
+  async cargarRegistros() {
+    const resultado = await fetch("/json/productos.json");
+    this.productos = await resultado.json();
+    cargarProductos(this.productos);
   }
 
   traerRegistros() {
@@ -40,6 +31,9 @@ class BaseDeDatos {
     return this.productos.filter((producto) =>
       producto.nombre.toLowerCase().includes(palabra.toLowerCase())
     );
+  }
+  registrosPorCategoria(categoria) {
+    return this.productos.filter((producto) => producto.categoria == categoria);
   }
 }
 
@@ -103,6 +97,11 @@ class Carrito {
       this.total += producto.precio * producto.cantidad;
       this.cantidadProductos += producto.cantidad;
     }
+    if (this.cantidadProductos > 0) {
+      botonComprar.style = "block";
+    } else {
+      botonComprar.style.display = "none";
+    }
 
     const botonesQuitar = document.querySelectorAll(".btnQuitar");
 
@@ -130,7 +129,21 @@ const divCarrito = document.querySelector("#carrito");
 const inputBuscar = document.querySelector("#inputBuscar");
 const botonCarrito = document.querySelector("section h1");
 const botonComprar = document.querySelector("#botonComprar");
+const botonesCategorias = document.querySelectorAll(".btnCategoria");
 
+botonesCategorias.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const categoria = boton.dataset.categoria;
+    const botonSeleccionado = document.querySelector(".seleccionado");
+    botonSeleccionado.classList.remove("seleccionado");
+    boton.classList.add("seleccionado");
+    if (categoria == "Todos") {
+      cargarProductos(bd.traerRegistros());
+    } else {
+      cargarProductos(bd.registrosPorCategoria(categoria));
+    }
+  });
+});
 const carrito = new Carrito();
 
 cargarProductos(bd.traerRegistros());

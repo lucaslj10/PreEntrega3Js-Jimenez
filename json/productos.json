@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "nombre": "NIKE AIR FORCE 1",
+    "precio": 400,
+    "categoria": "NIKE",
+    "imagen": "af1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "NIKE DUNK LOW",
+    "precio": 300,
+    "categoria": "NIKE",
+    "imagen": "nd.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "NIKE AIR MAX 97",
+    "precio": 100,
+    "categoria": "NIKE",
+    "imagen": "na.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "JORDAN RETRO 1",
+    "precio": 300,
+    "categoria": "JORDAN",
+    "imagen": "j1.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "JORDAN RETRO 3",
+    "precio": 1800,
+    "categoria": "JORDAN",
+    "imagen": "j3.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "JORDAN RETRO 4",
+    "precio": 300,
+    "categoria": "JORDAN",
+    "imagen": "j4.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "ADIDAS YEEZY",
+    "precio": 240,
+    "categoria": "ADIDAS",
+    "imagen": "ay.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "ADIDAS OZWEEGO",
+    "precio": 100,
+    "categoria": "ADIDAS",
+    "imagen": "ao.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "ADIDAS FORUM",
+    "precio": 300,
+    "categoria": "ADIDAS",
+    "imagen": "af.jpg"
+  }
+]

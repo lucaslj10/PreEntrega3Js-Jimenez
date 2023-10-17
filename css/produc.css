@@ -294,3 +294,20 @@ section a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+.boton {
+  color: white;
+
+  background-color: #bb1919;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 1px solid #270303a2;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.boton.seleccionado {
+  border: 4px solid rgb(136, 55, 228);
+  background-color: #7a2a92;
+}
